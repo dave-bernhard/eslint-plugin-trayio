@@ -1,5 +1,5 @@
 {
-    "name": "@davecoded/eslint-plugin-jira-todo",
+    "name": "@dave-bernhard/eslint-plugin-jira-todo",
     "version": "0.0.0",
     "description": "Any todo comment must have an associated JIRA ticket",
     "keywords": [
@@ -28,5 +28,18 @@
     "peerDependencies": {
         "eslint": ">=6"
     },
-    "license": "ISC"
+    "license": "ISC",
+    "directories": {
+        "doc": "docs",
+        "lib": "lib",
+        "test": "tests"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DaveCoded/eslint-plugin-jira-todo.git"
+    },
+    "bugs": {
+        "url": "https://github.com/DaveCoded/eslint-plugin-jira-todo/issues"
+    },
+    "homepage": "https://github.com/DaveCoded/eslint-plugin-jira-todo#readme"
 }
