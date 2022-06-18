@@ -8,17 +8,18 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-const requireIndex = require('requireindex');
-const configs = require('./configs');
+import rule from './rules/todo-jira-ticket';
+import configs from './configs';
 
 //------------------------------------------------------------------------------
 // Plugin Definition
 //------------------------------------------------------------------------------
 
-// import all rules in lib/rules
-const rules = requireIndex(__dirname + '/rules');
+const rules = {
+    'todo-jira-ticket': rule
+};
 
-module.exports = {
+export = {
     rules,
     configs
 };
