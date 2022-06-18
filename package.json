@@ -40,11 +40,12 @@
         "eslint": ">=6"
     },
     "license": "ISC",
-    "directories": {
-        "doc": "docs",
-        "lib": "lib",
-        "test": "tests"
-    },
+    "files": [
+        "dist",
+        "docs",
+        "package.json",
+        "README.md"
+    ],
     "repository": {
         "type": "git",
         "url": "git+https://github.com/DaveCoded/eslint-plugin-jira-todo.git"
