@@ -1,6 +1,6 @@
 {
     "name": "@dave-bernhard/eslint-plugin-jira-todo",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "Any todo comment must have an associated JIRA ticket",
     "keywords": [
         "eslint",
