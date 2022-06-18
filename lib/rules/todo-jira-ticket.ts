@@ -69,4 +69,4 @@ const rule = createRule({
     }
 });
 
-export default rule;
+module.exports = { rule };

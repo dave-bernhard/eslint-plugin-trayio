@@ -8,8 +8,8 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-import rule from '../../../lib/rules/todo-jira-ticket';
-import { ESLintUtils } from '@typescript-eslint/utils';
+const rule = require('../../../lib/rules/todo-jira-ticket');
+const ESLintUtils = require('@typescript-eslint/utils');
 
 const ruleTester = new ESLintUtils.RuleTester({
     parser: '@typescript-eslint/parser'
