@@ -41,10 +41,7 @@
     },
     "license": "ISC",
     "files": [
-        "dist",
-        "docs",
-        "package.json",
-        "README.md"
+        "dist"
     ],
     "repository": {
         "type": "git",

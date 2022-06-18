@@ -14,7 +14,7 @@ const createRule = ESLintUtils.RuleCreator(name => makePathToDocs(name));
 /**
  * @type {import('eslint').Rule.RuleModule}
  */
-export const rule = createRule({
+const rule = createRule({
     name: 'todo=jira-ticket',
     meta: {
         type: 'problem',
@@ -68,3 +68,5 @@ export const rule = createRule({
         };
     }
 });
+
+export default rule;
