@@ -8,14 +8,17 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-const rule = require('../../../lib/rules/todo-jira-ticket'),
-    RuleTester = require('eslint').RuleTester;
+import { rule } from '../../../lib/rules/todo-jira-ticket';
+import { ESLintUtils } from '@typescript-eslint/utils';
+
+const ruleTester = new ESLintUtils.RuleTester({
+    parser: '@typescript-eslint/parser'
+});
 
 //------------------------------------------------------------------------------
 // Tests
 //------------------------------------------------------------------------------
 
-const ruleTester = new RuleTester();
 ruleTester.run('todo-jira-ticket', rule, {
     valid: [
         // give me some code that won't trigger a warning
@@ -30,13 +33,13 @@ ruleTester.run('todo-jira-ticket', rule, {
     invalid: [
         {
             code: '// todo: I will do this later',
-            errors: [{ message: 'Your TODO is missing a valid JIRA ticket' }]
+            errors: [{ messageId: 'missing' }]
         },
         {
             code: `/* This is some text in a comment
             * and it goes over multiple lines.
             * TODO some other time */`,
-            errors: [{ message: 'Your TODO is missing a valid JIRA ticket' }]
+            errors: [{ messageId: 'missing' }]
         }
     ]
 });

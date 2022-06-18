@@ -2,7 +2,10 @@
  * @fileoverview Any todos left in comments must include a JIRA ticket
  * @author Dave Bernhard
  */
-'use strict';
+import { ESLintUtils } from '@typescript-eslint/utils';
+import { makePathToDocs } from '../helpers/makePath';
+
+const createRule = ESLintUtils.RuleCreator(name => makePathToDocs(name));
 
 //------------------------------------------------------------------------------
 // Rule Definition
@@ -11,17 +14,20 @@
 /**
  * @type {import('eslint').Rule.RuleModule}
  */
-module.exports = {
+export const rule = createRule({
+    name: 'todo=jira-ticket',
     meta: {
-        type: 'problem', // `problem`, `suggestion`, or `layout`
+        type: 'problem',
         docs: {
             description: 'Any todos left in comments must include a JIRA ticket',
-            recommended: true,
-            url: null // URL to the documentation page for this rule
+            recommended: 'error'
         },
-        fixable: null, // Or `code` or `whitespace`
-        schema: [] // Add a schema if the rule has options
+        messages: {
+            missing: 'Your TODO is missing a valid JIRA ticket'
+        },
+        schema: []
     },
+    defaultOptions: [],
 
     create(context) {
         // variables should be defined here
@@ -30,11 +36,11 @@ module.exports = {
         // Helpers
         //----------------------------------------------------------------------
 
-        function hasTodo(value) {
+        function hasTodo(value: string) {
             return value.toLowerCase().includes('todo');
         }
 
-        function isMissingJIRATicket(value) {
+        function isMissingJIRATicket(value: string) {
             const regex = /([A-Z]{2,})-\d+/;
             return !regex.test(value);
         }
@@ -46,14 +52,14 @@ module.exports = {
         return {
             Program(node) {
                 const { comments } = node;
-                if (comments.length > 0) {
+                if (comments && comments.length > 0) {
                     comments.forEach(comment => {
                         console.log({ comment });
                         const { value } = comment;
                         if (hasTodo(value) && isMissingJIRATicket(value)) {
                             context.report({
                                 node: comment,
-                                message: 'Your TODO is missing a valid JIRA ticket'
+                                messageId: 'missing'
                             });
                         }
                     });
@@ -61,4 +67,4 @@ module.exports = {
             }
         };
     }
-};
+});
