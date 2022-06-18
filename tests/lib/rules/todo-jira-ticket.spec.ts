@@ -8,7 +8,7 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-import { rule } from '../../../lib/rules/todo-jira-ticket';
+import rule from '../../../lib/rules/todo-jira-ticket';
 import { ESLintUtils } from '@typescript-eslint/utils';
 
 const ruleTester = new ESLintUtils.RuleTester({
