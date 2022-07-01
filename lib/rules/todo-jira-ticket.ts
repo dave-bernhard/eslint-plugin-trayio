@@ -11,9 +11,6 @@ const createRule = ESLintUtils.RuleCreator(name => makePathToDocs(name));
 // Rule Definition
 //------------------------------------------------------------------------------
 
-/**
- * @type {import('eslint').Rule.RuleModule}
- */
 const rule = createRule({
     name: 'todo=jira-ticket',
     meta: {
@@ -54,7 +51,6 @@ const rule = createRule({
                 const { comments } = node;
                 if (comments && comments.length > 0) {
                     comments.forEach(comment => {
-                        console.log({ comment });
                         const { value } = comment;
                         if (hasTodo(value) && isMissingJIRATicket(value)) {
                             context.report({
