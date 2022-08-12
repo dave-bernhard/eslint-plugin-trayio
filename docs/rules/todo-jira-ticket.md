@@ -1,4 +1,4 @@
-# Any todos left in comments must include a JIRA ticket (todo-jira-ticket)
+# Any todos left in comments must include a JIRA ticket (skipped-test-jira-ticket)
 
 Please describe the origin of the rule here.
 
