@@ -1,7 +1,7 @@
 const configs = {
   recommended: {
     rules: {
-      "@dave-bernhard/trayio/skipped-test-jira-ticket": "error",
+      "@dave-trayio/trayio/skipped-test-jira-ticket": "error",
     },
   },
 };

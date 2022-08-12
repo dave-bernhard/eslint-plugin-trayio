@@ -1,7 +1,7 @@
 {
-  "name": "@dave-bernhard/eslint-plugin-trayio",
-  "version": "0.0.12",
-  "description": "Any todo comment must have an associated JIRA ticket",
+  "name": "@dave-trayio/eslint-plugin-trayio",
+  "version": "0.0.1",
+  "description": "Custom ESLint rules for Tray, potentially",
   "keywords": [
     "eslint",
     "eslintplugin",
@@ -17,15 +17,13 @@
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.28.0",
-    "@typescript-eslint/parser": "^5.28.0",
-    "requireindex": "^1.2.0"
+    "@typescript-eslint/parser": "^5.28.0"
   },
   "devDependencies": {
     "@types/eslint": "^8.4.3",
     "@types/expect": "^24.3.0",
     "@types/mocha": "^9.1.1",
     "@types/node": "^18.0.0",
-    "@types/requireindex": "^1.2.0",
     "eslint": "^8.0.1",
     "eslint-plugin-eslint-plugin": "^4.0.1",
     "eslint-plugin-node": "^11.1.0",
@@ -42,13 +40,5 @@
   "license": "ISC",
   "files": [
     "dist"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DaveCoded/eslint-plugin-trayio.git"
-  },
-  "bugs": {
-    "url": "https://github.com/DaveCoded/eslint-plugin-trayio/issues"
-  },
-  "homepage": "https://github.com/DaveCoded/eslint-plugin-trayio#readme"
+  ]
 }

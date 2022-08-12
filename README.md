@@ -1,11 +1,11 @@
-# @dave-bernhard/eslint-plugin-trayio
+# @dave-trayio/eslint-plugin-trayio
 ## Usage
 
-Add `@dave-bernhard/trayio` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Add `@dave-trayio/trayio` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
 
 ```json
 {
-    "plugins": ["@dave-bernhard/trayio"]
+    "plugins": ["@dave-trayio/trayio"]
 }
 ```
 
@@ -14,7 +14,7 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "@dave-bernhard/trayio/skipped-test-jira-ticket": 2
+        "@dave-trayio/trayio/skipped-test-jira-ticket": 2
     }
 }
 ```
@@ -23,8 +23,8 @@ Or use the recommended configuration for the plugin:
 
 ```json
 {
-    "plugins": ["@dave-bernhard/trayio"],
-    "extends": ["plugin:@dave-bernhard/trayio/recommended"]
+    "plugins": ["@dave-trayio/trayio"],
+    "extends": ["plugin:@dave-trayio/trayio/recommended"]
 }
 ```
 
