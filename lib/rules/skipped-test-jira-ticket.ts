@@ -1,7 +1,3 @@
-/**
- * @fileoverview Any todos left in comments must include a JIRA ticket
- * @author Dave Bernhard
- */
 import { ESLintUtils, AST_NODE_TYPES } from "@typescript-eslint/utils";
 import { makePathToDocs } from "../helpers/makePath";
 
@@ -34,8 +30,6 @@ const rule = createRule({
   defaultOptions: [],
 
   create(context) {
-    // variables should be defined here
-
     //----------------------------------------------------------------------
     // Helpers
     //----------------------------------------------------------------------

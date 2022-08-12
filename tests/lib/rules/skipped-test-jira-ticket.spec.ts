@@ -1,23 +1,9 @@
-/**
- * @fileoverview Any todos left in comments must include a JIRA ticket
- * @author Dave Bernhard
- */
-"use strict";
-
-//------------------------------------------------------------------------------
-// Requirements
-//------------------------------------------------------------------------------
-
 import rule from "../../../lib/rules/skipped-test-jira-ticket";
 import { ESLintUtils } from "@typescript-eslint/utils";
 
 const ruleTester = new ESLintUtils.RuleTester({
   parser: "@typescript-eslint/parser",
 });
-
-//------------------------------------------------------------------------------
-// Tests
-//------------------------------------------------------------------------------
 
 ruleTester.run("skipped-test-jira-ticket", rule, {
   valid: [

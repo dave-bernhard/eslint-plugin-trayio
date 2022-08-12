@@ -1,16 +1,17 @@
-# Any todos left in comments must include a JIRA ticket (skipped-test-jira-ticket)
-
-Please describe the origin of the rule here.
+# Skipped tests must have a todo comment with a valid jira ticket (skipped-test-jira-ticket)
 
 ## Rule Details
 
-This rule aims to...
+If you skip a test, or a block of tests, then we should track it in JIRA. That way, the tests can be fixed and reinstated, or deleted, at a later date.
+Ultimately, we don't want to just forget about them.
 
 Examples of **incorrect** code for this rule:
 
 ```js
 
-// fill me in
+test.skip('some functionality works as we expect', () => {
+    ...
+})
 
 ```
 
@@ -18,18 +19,9 @@ Examples of **correct** code for this rule:
 
 ```js
 
-// fill me in
+// todo: fix and reinstate in USP-2342
+test.skip('some functionality works as we expect', () => {
+    ...
+})
 
 ```
-
-### Options
-
-If there are any options, describe them here. Otherwise, delete this section.
-
-## When Not To Use It
-
-Give a short description of when it would be appropriate to turn off this rule.
-
-## Further Reading
-
-If there are other links that describe the issue this rule addresses, please include them here in a bulleted list.
